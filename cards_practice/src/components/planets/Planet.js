@@ -5,11 +5,18 @@ function Planet(props) {
 
     return (
         <div className="Planet">
-            <img src= {planet.url} alt='missing'/>
-            <p>{planet.name}</p>
-            <p>{planet.moons}</p>
-            <p>{planet.diameter}</p>
-            <p>{planet.desc}</p>
+            <div className="infoCard">
+                <div>
+                    <img src= {planet.url} alt='missing'/>
+                </div>
+                <h2>{planet.name}</h2>
+                <p>{planet.desc}</p>
+                <h3>Extra Info</h3>
+                <ul>
+                    <li><strong>Moons:</strong> {planet.moons}</li>
+                    <li><strong>Diameter:</strong> {planet.diameter}</li>
+                </ul>
+            </div>
         </div>
     );
 }
